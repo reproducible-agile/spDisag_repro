@@ -57,36 +57,36 @@ def selectAncDt(city, year, inputDataset, ancillary_path):
     if city == 'ams':
        
         ancdataset1, rastergeo = osgu.readRaster(os.path.join(ancillary_path, 'GHS', 'GHS_POP_100_near_cubicspline.tif'))
-        ancdataset2 = osgu.readRaster(os.path.join(ancillary_path, 'ESM/{}_residential.tif'.format(city)))[0]
+        #ancdataset2 = osgu.readRaster(os.path.join(ancillary_path, 'ESM/{}_residential.tif'.format(city)))[0]
         ancdataset3 = osgu.readRaster(os.path.join(ancillary_path, 'corine/agric_{}_CLC_2012_2018.tif'.format(city)))[0]
         
         ancdataset4 = osgu.readRaster(os.path.join(ancillary_path, 'corine/greenSpaces_{}_CLC_2012_2018.tif'.format(city)))[0] 
-        ancdataset4A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_greenSpacesProximity.tif'.format(city)))[0]
+        #ancdataset4A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_greenSpacesProximity.tif'.format(city)))[0]
         
         ancdataset5 = osgu.readRaster(os.path.join(ancillary_path, 'corine/urbfabr_{}_CLC_2012_2018.tif'.format(city)))[0]
         ancdataset6 = osgu.readRaster(os.path.join(ancillary_path, 'corine/waterComb_{}_CLC_2012_2018.tif'.format(city)))[0]
         
         ancdataset7 = osgu.readRaster(os.path.join(ancillary_path, 'corine/industry_{}_CLC_2012_2018.tif'.format(city)))[0]
-        ancdataset7A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_industryProximity.tif'.format(city)))[0]
+        #ancdataset7A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_industryProximity.tif'.format(city)))[0]
         
         ancdataset8 = osgu.readRaster(os.path.join(ancillary_path, 'corine/transp_{}_CLC_2012_2018.tif'.format(city)))[0]
         
-        ancdataset9 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_busstopsProximity.tif'.format(city)))[0]
-        ancdataset10 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_trainstationsProximity.tif'.format(city)))[0]
-        ancdataset11 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_schoolProximity.tif'.format(city)))[0]
-        ancdataset12 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_univProximity.tif'.format(city)))[0]
+        #ancdataset9 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_busstopsProximity.tif'.format(city)))[0]
+        #ancdataset10 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_trainstationsProximity.tif'.format(city)))[0]
+        #ancdataset11 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_schoolProximity.tif'.format(city)))[0]
+        #ancdataset12 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_univProximity.tif'.format(city)))[0]
         
-        ancdataset9A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_busstopsCount.tif'.format(city)))[0]
-        ancdataset10A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_trainstationsCount.tif'.format(city)))[0]
-        ancdataset11A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_schoolCount.tif'.format(city)))[0]
-        ancdataset12A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_univCount.tif'.format(city)))[0]
+        #ancdataset9A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_busstopsCount.tif'.format(city)))[0]
+        #ancdataset10A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_trainstationsCount.tif'.format(city)))[0]
+        #ancdataset11A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_schoolCount.tif'.format(city)))[0]
+        #ancdataset12A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_univCount.tif'.format(city)))[0]
         
-        ancdataset13 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/apartments_sdate.tif'))[0]
-        ancdataset13A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/apartments_sdate_fillnodata100.tif'))[0] #THIS IS OTHER SIZE
-        ancdataset13B = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_buildingYear.tif'.format(city)))[0]
+        #ancdataset13 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/apartments_sdate.tif'))[0]
+        #ancdataset13A = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/apartments_sdate_fillnodata100.tif'))[0] #THIS IS OTHER SIZE
+        #ancdataset13B = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_buildingYear.tif'.format(city)))[0]
         
-        ancdataset14 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_buildingVolume.tif'.format(city)))[0]
-        ancdataset15 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_buildingHeight.tif'.format(city)))[0]
+        #ancdataset14 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_buildingVolume.tif'.format(city)))[0]
+        #ancdataset15 = osgu.readRaster(os.path.join(ancillary_path, 'temp_tif/{}_buildingHeight.tif'.format(city)))[0]
         
         #'GHS_ESM_corine': '8AIL0', 'GHS_ESM_corine_transp':12AIL1, 'GHS_ESM_corine_transpA': 12AIL2
         if inputDataset == 'AIL0':
@@ -117,5 +117,7 @@ def selectAncDt(city, year, inputDataset, ancillary_path):
             ancdatasets = np.dstack((ancdataset2, ancdataset4A, ancdataset6, ancdataset7A, ancdataset8,ancdataset9A,ancdataset10A,ancdataset11A,ancdataset12A, ancdataset13B,  ancdataset14,  ancdataset15 ))
         elif inputDataset == 'AIL13':
             ancdatasets = np.dstack((ancdataset2, ancdataset4A, ancdataset5, ancdataset6, ancdataset7A, ancdataset8,ancdataset9A,ancdataset10A,ancdataset11A,ancdataset12A, ancdataset13B,  ancdataset14,  ancdataset15 ))
+        elif inputDataset == 'AIL99':
+            ancdatasets = np.dstack((ancdataset1, ancdataset3, ancdataset4, ancdataset5,ancdataset6, ancdataset7,ancdataset8))
        
     return ancdatasets, rastergeo
